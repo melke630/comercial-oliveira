@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comercial Oliveira - Gestão de Estoque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Comercial Oliveira</h1>
+    <p>Painel de Controle de Estoque</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Cadastrar Produto</h2>
+      <form id="productForm">
+        <div class="form-group">
+          <label for="name">Nome do Produto:</label>
+          <input type="text" id="name" required placeholder="Ex: Sofá 5kg">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Categoria:</label>
+          <select id="category" required>
+            <option value="">Selecione...</option>
+            <option value="Eletrodomésticos">Eletrodomésticos</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Limpeza">Limpeza</option>
+            <option value="Móveis">Móveis</option>
+            <option value="Eletroeletrônicos">Eletroeletrônicos</option>
+            <option value="Esportes e Lazer">Esportes e Lazer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantidade:</label>
+          <input type="number" id="quantity" min="0" required placeholder="0">
+        </div>
+
+        <div class="form-group">
+          <label for="price">Preço Unitário (R$):</label>
+          <input type="number" id="price" step="any" min="0" required placeholder="0.00">
+        </div>
+
+        <button type="submit" class="btn">Cadastrar Produto</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Produtos em Estoque</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Qtd.</th>
+              <th>Preço Un.</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTable">
+            </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Comercial Oliveira &copy; 2026 | Suporte Técnico TI: (99) 99999-9999</p>
+    <p>Endereço: Av. Principal, 1000 - Centro</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
